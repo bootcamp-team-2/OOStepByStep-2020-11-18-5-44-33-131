@@ -18,6 +18,12 @@ namespace OOStepByStep
             this.classNumber = classNumber;
         }
 
+        public void Enroll(Class @class)
+        {
+            @class.AddStudent(this);
+            this.classNumber = @class.GetClassNumber();
+        }
+
         public override string Introduce()
         {
             string identity = profession + (classNumber.HasValue ? $" of class {classNumber}" : string.Empty);
