@@ -6,13 +6,15 @@ namespace OOStepByStep
 {
     public class Student : Person
     {
+        private string profession = "student";
+
         public Student(string name, int age) : base(name, age)
         {
         }
 
         public override string Introduce()
         {
-            return base.Introduce() + " I am a student.";
+            return base.Introduce() + $" I am a {profession}.";
         }
     }
 }
