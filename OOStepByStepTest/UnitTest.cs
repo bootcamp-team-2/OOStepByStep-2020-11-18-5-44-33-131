@@ -47,13 +47,14 @@ namespace OOStepByStepTest
     public class TeacherTest
     {
         [Fact]
-        public void Student_should_introduce_with_name_and_age()
+        public void Teacher_should_introduce_with_name_and_age()
         {
             // given
             string name = "Amy";
             int age = 30;
-            var teacher = new Teacher(name, age);
-            string expect = "My name is Amy. I am 30 years old. I am a teacher.";
+            var findclassNumber = new TeacherFindClass();
+            var teacher = new Teacher(name, age, findclassNumber);
+            string expect = "My name is Amy. I am 30 years old. I am a teacher of class 2.";
             //A student can introduce him/herself like this: My name is Tom. I am 18 years old. I am a student.
             // when
             string actual = teacher.Introduce();
