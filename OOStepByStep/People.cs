@@ -29,4 +29,17 @@
             return base.Introduce() + $" I am a {this.profession}.";
         }
     }
+
+    public class Teacher : Person
+    {
+        private string profession = "teacher";
+        public Teacher(string name, int age) : base(name, age)
+        {
+        }
+
+        public override string Introduce()
+        {
+            return base.Introduce() + $" I am a {this.profession}.";
+        }
+    }
 }
